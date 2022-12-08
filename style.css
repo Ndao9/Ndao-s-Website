@@ -68,7 +68,7 @@ hr { margin: 40px 0px; border-color: #727878; opacity: 0.2; filter:alpha(opacity
 }
 .jumbotron .scroll-down:hover .glyphicon { padding-top: 25px; }
 
-.navbar  { border: 0px; background-color: #222222; position: absolute; top:100%; right: 5%; width: 110px; z-index: 999;  }
+.navbar  { border: 0px; background-color: #222222; position: relative; top:100%; right: 5%; width: 110px; z-index: 999;  }
 .navbar .navbar-collapse { padding: 2px; max-height: none; }
 .navbar .navbar-nav { float: none; }
 .navbar-nav { background-color: black;
