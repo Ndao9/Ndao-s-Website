@@ -1,6 +1,6 @@
 html, body { color: #434242; font-family: 'Open Sans', sans-serif !important; height: 100%; }
 body { background: #F3EFE0; font-size: 15px; line-height: 1.64; }
-h1 { font-family:'Brush Script MT', cursive; margin-bottom: 20px; font-size: 40px; }
+h1 { font-family:'Brush Script MT', cursive; margin-bottom: 20px; font-size: 100px; }
 h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, strong, b { font-family: 'Open Sans', sans-serif !important; margin-bottom: 20px; }
 h1,h4 { font-weight: 700; margin-bottom: 10px; }
 h2,h3 { font-weight: 300; color: #22A39F; }
