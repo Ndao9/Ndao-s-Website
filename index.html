@@ -1,39 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-			
-		<title>MOHAMED NDAO - Resume</title>
-		
-		<!-- Bootstrap core CSS -->
-		<link href="style.css" rel="stylesheet" />
-		
-		<link rel="shortcut icon" href="logo.ico.png" type="image/x-icon" />
-		<link rel="icon" href="logo.ico.png" type="image/x-icon" />
-		
-	</head>
-	<body data-spy="scroll" data-target="#navbar-example">	
-	<div id="top" class="jumbotron" data-position="center right">
-		<div class="overlay"></div>
-			<div class="container">
-				<h1>Mohamed Ndao</h1>
-				<p class="lead">The resume of mine </p>
-			</div>
-			</div>
-		<nav class="navbar navbar-default" id="navbar-example" role="navigation">
-			
-			<div class="navbar-header">
-			</div>
-			<div class="collapse navbar-collapse navbar-ex1-collapse">
-				<ul class="nav navbar-nav">
-					<li><a href="#profile">Profile</a></li>
-					<li><a href="#experiences">Experiences</a></li>
-					<li><a href="#abilities">Abilities</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</div><!-- /.navbar-collapse -->
-		</nav>
-		
-		<div class="background-white">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohamed Ndao - Resume</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="logo.ico.png" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- HEADER / HERO SECTION -->
+  <header class="jumbotron">
+    <div class="overlay"></div>
+    <div class="container">
+      <h1>Mohamed Ndao</h1>
+      <p class="lead">The resume of mine</p>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <ul class="nav">
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="#abilities">Abilities</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PROFILE SECTION -->
+  <section id="profile" class="container background-white">
+    <h2>Profile</h2>
+    <p class="lead">I'm a Computer Engineering Student</p>
+    <hr />
+    <div class="row">
+      <div class="col">
+        <h3>About me</h3>
+        <p>
+          I like everything about computing. I am a good programmer with good knowledge of front-end techniques.
+          I love structure and order and I also stand for quality. I love spending time with my computer to learn more about it.
+          Also I like working in a team, you'll learn faster and much more. As the saying goes: 'two heads are better than one'.
+        </p>
+      </div>
+      <div class="col text-center">
+        <img id="me" src="20230413_180550.jpg" alt="Mohamed Ndao" />
+      </div>
+      <div class="col">
+        <h3>Details</h3>
+        <p><strong>Name:</strong><br />Mohamed Ndao</p>
+        <p><strong>Age:</strong><br />20 years</p>
+        <p><strong>Location:</strong><br />KDU, Colombo, Sri Lanka</p>
+
+        <a href="https://twitter.com/Ndao" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">
+          Follow @Ndao
+        </a>
+        <script>
+          !function(d,s,id){
+            var js,fjs=d.getElementsByTagName(s)[0],
+            p=/^http:/.test(d.location)?'http':'https';
+            if(!d.getElementById(id)){
+              js=d.createElement(s);
+              js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+              fjs.parentNode.insertBefore(js,fjs);
+            }
+          }(document, 'script', 'twitter-wjs');
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCES SECTION -->
+  <section id="experiences" class="container">
+    <h2>Experiences</h2>
+    <p class="lead">
+      “Protons give an atom its identity, electrons its personality.”<br />- Bill Bryson
+    </p>
+    <hr />
+    <h3>Educations</h3>
+    <h4 class="text-center">Schools & Universities</h4>
+
+    <div class="experience">
+      <div class="experience-card">
+        <h4>I.D Primary School</h4>
+        <p class="experience-period">Oct 2008 – July 2012 <span class="location">Kaolack, Senegal</span></p>
+        <h4>G.M Primary School</h4>
+        <p class="experience-period">Oct 2012 – July 2013 <span class="location">Kaolack, Senegal</span></p>
+      </div>
+
+      <div class="experience-card">
+        <h4>PA I Primary School</h4>
+        <p class="experience-period">Oct 2013 – July 2014 <span class="location">Kaolack, Senegal</span></p>
+        <h4>CEM PA College</h4>
+        <p class="experience-period">Oct 2014 – July 2018 <span class="location">Kaolack, Senegal</span></p>
+      </div>
+
+      <div class="experience-card">
+        <h4>LSED High School</h4>
+        <p class="experience-period">Oct 2018 – July 2021 <span class="location">Diourbel, Senegal</span></p>
+        <h4>KDU University</h4>
+        <p class="experience-period">Oct 2021 – Present <span class="location">Colombo, Sri Lanka</span></p>
+      </div>
+    </div>
+
+    <hr />
+    <h3 class="text-center">Subjects</h3>
+    <div class="subjects">
+      <p>MATHEMATICS • PHYSICS • PHILOSOPHY • BIOLOGY • GEOLOGY • CHEMISTRY • HISTORY • GEOGRAPHY • ELECTRICITY • COMPUTER SCIENCE • COMPUTER ARCHITECTURE • DATABASE MANAGEMENT • PROGRAMMING • LEADERSHIP & MANAGEMENT • MILITARY STUDIES</p>
+    </div>
+  </section>
+
+  <!-- ABILITIES SECTION -->
+  <section id="abilities" class="container background-white">
+    <h2>Abilities</h2>
+    <p class="lead">“Life without knowledge is death in disguise.”<br />- Talib Kweli</p>
+    <hr />
+
+    <h3>Skills</h3>
+    <div class="skills">
+      <!-- Keep your original skill stars (unchanged) -->
+      <!-- Example shown for one skill -->
+      <div class="skill"><span>CSS(3)</span><span>★★★★★</span></div>
+      <div class="skill"><span>HTML(5)</span><span>★★★★★</span></div>
+      <div class="skill"><span>JSON</span><span>★★★★★</span></div>
+      <div class="skill"><span>Java</span><span>★★★★☆</span></div>
+      <div class="skill"><span>Javascript</span><span>★★★★☆</span></div>
+    </div>
+
+    <h3>Languages</h3>
+    <div class="skills">
+      <div class="skill"><span>Wolof</span><span>★★★★★</span></div>
+      <div class="skill"><span>English</span><span>★★★★★</span></div>
+      <div class="skill"><span>French</span><span>★★★☆☆</span></div>
+      <div class="skill"><span>Spanish</span><span>★☆☆☆☆</span></div>
+    </div>
+
+    <h3>Tools</h3>
+    <div class="skills">
+      <div class="skill"><span>Codeblocks</span><span>★★★★★</span></div>
+      <div class="skill"><span>MS Office</span><span>★★★★★</span></div>
+      <div class="skill"><span>Sublime Text</span><span>★★★★☆</span></div>
+      <div class="skill"><span>Adobe Photoshop</span><span>★★★☆☆</span></div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="container background-gray">
+    <h2>Contact</h2>
+    <p class="lead">
+      “If I had asked people what they wanted, they would have said faster horses.”<br />- Henry Ford
+    </p>
+    <hr />
+    <ul class="contact-list">
+      <li><a href="https://twitter.com/ndao" target="_blank">🐦 Twitter</a></li>
+      <li><a href="http://linkedin.nl/in/ndao" target="_blank">🔗 LinkedIn</a></li>
+      <li><a href="https://facebook.com/ndao" target="_blank">📘 Facebook</a></li>
+    </ul>
+  </section>
+</body>
+</html>
 			<div id="profile" class="container">
 				<h2>Profile</h2>
 <p class="lead">I&#039;m a Computer Engineering Student</p>
@@ -1015,3 +1143,4 @@
 		
 	</body>
 </html>
+
