@@ -1,40 +1,387 @@
-html, body { color: #434242; font-family: 'Open Sans', sans-serif !important; height: 100%; }
-body { background: #F3EFE0; font-size: 15px; line-height: 1.64; }
-h1 { font-family:'Gabriola', cursive; margin-bottom: 20px; font-size: 100px; }
-h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, strong, b { font-family: 'Open Sans', sans-serif !important; margin-bottom: 20px; }
-h1,h4 { font-weight: 700; margin-bottom: 10px; }
-h2,h3 { font-weight: 300; color: #22A39F; }
-h2 { font-size: 54px; text-align: center; }
-h3 { font-size: 28px; }
+/*
+ * General Styles
+ */
+html, body {
+  color: #434242;
+  font-family: 'Open Sans', sans-serif, 'Gabriola', cursive;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-p.lead { text-align: center; color: #727878; }
-p.lead a { color: #FFFFFF; text-decoration:none ; }
-p.lead a:hover { text-decoration: none; }
-ul.no-bullets { list-style-type: none; margin: 0px; padding: 0px; }
-hr { margin: 40px 0px; border-color: #727878; opacity: 0.2; filter:alpha(opacity=20); }
+body {
+  background: #F3EFE0;
+  font-size: 15px;
+  line-height: 1.64;
+}
 
-#me{border:  1em  ;
-    border-radius: 0%;}
+h1 {
+  font-family: 'Gabriola', cursive;
+  margin-bottom: 20px;
+  font-size: 100px;
+  font-weight: 700;
+}
 
-.project-referal { margin-top: 40px; }
-.project-referal p { font-style: italic; color: #999999; }
+h2 {
+  font-size: 54px;
+  text-align: center;
+  font-weight: 300;
+  color: #22A39F;
+}
 
-.btn-primary { background-color: #22A39F; border-color: #1c8784; }
-.btn-primary:hover { background-color: #1c8784;  border-color: #1c8784; }
+h3 {
+  font-size: 28px;
+  font-weight: 300;
+  color: #22A39F;
+}
 
-.icon { display: inline-block; background: url(images/sm_icon_sprite.png) no-repeat; height: 32px; width: 32px; }
-.icon.icon-twitter { background-position: 0px 0px; }
-.icon.icon-linkedin { background-position: 0px -32px; }
+h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, strong, b {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+p.lead {
+  text-align: center;
+  color: #727878;
+  font-size: 28px;
+}
+
+p.lead a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+p.lead a:hover {
+  text-decoration: none;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  margin: 40px 0;
+  border-color: #727878;
+  opacity: 0.2;
+}
+
+/*
+ * Jumbotron/Header
+ */
 .jumbotron {
-	background: no-repeat center right fixed url(images/background.jpg);
+  position: relative;
+  margin-bottom: 0;
+  padding: 0;
+  background: no-repeat center center url(images/background.jpg);
+  background-size: cover;
+  background-attachment: fixed; /* Parallax effect */
+}
 
-	-webkit-background-size: 100%; 
-    -moz-background-size: 100%; 
-    -o-background-size: 100%; 
-    background-size: 100%; 
-	
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
+.jumbotron .overlay {
+  background-color: red;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.75;
+  z-index: 2;
+}
+
+.jumbotron .container {
+  position: relative;
+  z-index: 4;
+  text-align: center;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+.jumbotron h1 {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.35);
+  display: inline-block;
+}
+
+/*
+ * Navbar
+ */
+.navbar {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  min-width: 25px;
+  z-index: 1400;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.navbar .nav {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar .nav > li {
+  background-color: black;
+  margin: 10px 0;
+}
+
+.navbar .nav > li a {
+  display: block;
+  text-align: center;
+  padding: 20px;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.navbar .nav > li a:hover,
+.navbar .nav > li a:focus {
+  color: red;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background: #22A39F;
+  color: #FFFFFF;
+}
+
+/*
+ * Main Content Sections
+ */
+.container {
+  max-width: 1280px;
+  padding: 40px 180px;
+  margin: 0 auto;
+}
+
+.background-white {
+  background: #FFFFFF;
+}
+
+.background-gray {
+  background: #434242;
+  color: #FFFFFF;
+}
+
+#profile .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.col-md-4 {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+
+#me {
+  width: 246px;
+  height: 246px;
+  border-radius: 50%;
+  border: 1em solid transparent;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/*
+ * Experiences Section
+ */
+#experiences .experience {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#experiences .experience-period,
+#experiences .experience .location {
+  display: block;
+}
+
+/*
+ * Abilities Section
+ */
+#abilities ul > li {
+  min-height: 30px;
+  padding: 3px 1px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#abilities ul > li:hover {
+  background: #F2F2F2;
+}
+
+#abilities ul > li .ability-title {
+  display: inline-block;
+  flex-grow: 1;
+}
+
+#abilities ul > li .ability-score {
+  white-space: nowrap;
+}
+
+#abilities ul > li .ability-score .glyphicon {
+  color: #DFE0E0;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+#abilities ul > li .ability-score .glyphicon.filled {
+  color: #22A39F;
+}
+
+/*
+ * Contact Section
+ */
+#contact a {
+  display: block;
+  line-height: 32px;
+  margin-bottom: 20px;
+  opacity: 0.6;
+  text-decoration: none;
+  color: #FFFFFF;
+  transition: opacity 0.3s;
+}
+
+#contact a:hover {
+  opacity: 1;
+}
+
+.icon {
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  background-image: url('images/sm_icon_sprite.png');
+  background-repeat: no-repeat;
+}
+
+.icon-twitter { background-position: 0 0; }
+.icon-linkedin { background-position: 0 -32px; }
+/* Assuming a facebook icon is also in the sprite */
+.icon-facebook { background-position: 0 -64px; }
+
+
+/*
+ * Media Queries for Responsiveness
+ */
+@media (max-width: 991px) {
+  h1 { font-size: 60px; }
+  h2 { font-size: 40px; }
+  h3 { font-size: 24px; }
+  p.lead { font-size: 20px; }
+
+  .container {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Stack columns on small screens */
+  .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .col-md-4, .col-md-6, .col-md-8 {
+    min-width: 100%;
+    padding: 10px;
+  }
+
+  /* Adjustments for fixed navbar on mobile */
+  .navbar {
+    position: static;
+    height: auto;
+    width: 100%;
+    min-width: auto;
+    box-shadow: none;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .navbar .nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar .nav > li {
+    margin: 5px;
+    min-height: auto;
+  }
+
+  .navbar .nav > li a {
+    padding: 10px;
+  }
+
+  .jumbotron {
+    background-attachment: scroll; /* Disable parallax on mobile for performance */
+  }
+
+  .jumbotron .container {
+    min-height: 400px;
+    padding: 20px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  #profile .row {
+    flex-direction: column;
+  }
+
+  #me {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+  }
+
+  #experiences .experience {
+    flex-direction: column;
+  }
+
+  #abilities ul > li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #abilities ul > li .ability-title {
+    width: 100%;
+  }
+
+  #abilities ul > li .ability-score {
+    margin-top: 5px;
+  }
+  
+  .background-white .container,
+  .background-gray .container {
+    padding: 20px;
+  }
+}	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 	
@@ -291,3 +638,4 @@ figure.effect:hover p {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
+
